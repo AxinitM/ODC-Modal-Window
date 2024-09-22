@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Windows</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Modal Windows</h1>
+    </header>
+
+    <main id="buttonSection">
+      <button class="modalButton">Modal Window 1</button>
+      <button class="modalButton">Modal Window 2</button>
+      <button class="modalButton">Modal Window 3</button>
+    </main>
+
+    <!-- Modal section -->
+    <div id="myModal" class="modal hidden overlay">
+      
+        <!-- Modal content -->
+
+      <div class="modalContent">
+        <span class="closeButton">&times;</span>
+        <h3 id="windowTitle"></h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat,
+          consequuntur? Culpa dignissimos ad, incidunt molestiae rerum,
+          exercitationem aliquam nisi ab eligendi iure, iste officia tempore
+          natus et saepe modi dolores?
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

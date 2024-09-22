@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--mainFamilyFont);
+}
+
+:root {
+  /* colors */
+  --whiteColor: #fff;
+  --blackColor: #000;
+  --bgColor: #f0f8ff;
+  --buttonColor: #000080;
+  --accentButtonColor: #ff0000;
+  --buttonHoverColColor: #187818;
+  --modalBgColor: #d8eefe;
+  --modalTextColor: #000080;
+  --overlayColor: rgba(0, 0, 0, 0.4);
+
+  /* fonts */
+  --mainFamilyFont: "Space Mono", sans-serif;
+}
+
+/* General sets */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+  background-color: var(--bgColor);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 30px 0px 60px;
+}
+
+/* buttons section */
+
+#buttonSection {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  background-color: var(--buttonColor);
+  color: var(--bgColor);
+  font-size: 1rem;
+  padding: 0 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 150px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--buttonHoverColColor);
+  scale: 1.05;
+  transform: scale(1.1);
+}
+
+/* modal  section */
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  min-height: 250px;
+  padding: 1.3rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--modalBgColor);
+  color: var(--modalTextColor);
+  border: 1px solid var(--blackColor);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+h3 {
+  font-weight: 600;
+  align-self: flex-start;
+  padding-top: 20px;
+}
+
+.modalContent p {
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* modal section overlay */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlayColor);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+/* modal section button close  */
+
+.closeButton {
+  color: var(--accentButtonColor);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  color: var(--buttonHoverColColor);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* @media section */
+
+@media (max-width: 470px) {
+  h1 {
+    text-align: center;
+    margin: 50px 25px 60px;
+  }
+
+  #buttonSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .modalContent {
+    width: 80%;
+  }
+
+  button {
+    width: 90%;
+    transition: none;
+  }
+
+  button:hover {
+    background-color: var(--buttonHoverColColor);
+    transform: none;
+  }
+}
